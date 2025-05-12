@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogIn } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,8 +39,18 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
-          <Button size="sm" className="ml-4 bg-brand-500 hover:bg-brand-600">
-            Get Started
+          <Button 
+            size="sm" 
+            variant="outline"
+            asChild
+            className="ml-1 border-indigo-500 text-indigo-600 hover:text-indigo-700 hover:border-indigo-700"
+          >
+            <Link to="/auth" className="flex items-center">
+              <LogIn size={16} className="mr-1" /> Sign In
+            </Link>
+          </Button>
+          <Button size="sm" asChild className="ml-1 bg-brand-500 hover:bg-brand-600">
+            <Link to="/auth?tab=register">Get Started</Link>
           </Button>
         </nav>
         
@@ -67,9 +77,18 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
+            <Link
+              to="/auth"
+              className="flex items-center px-3 py-2 text-base font-medium text-indigo-600 hover:text-indigo-700 hover:bg-gray-50 rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <LogIn size={16} className="mr-2" /> Sign In
+            </Link>
             <div className="pt-2">
-              <Button className="w-full bg-brand-500 hover:bg-brand-600">
-                Get Started
+              <Button className="w-full bg-brand-500 hover:bg-brand-600" asChild>
+                <Link to="/auth?tab=register" onClick={() => setIsMenuOpen(false)}>
+                  Get Started
+                </Link>
               </Button>
             </div>
           </div>
