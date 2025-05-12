@@ -39,9 +39,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main className="flex-grow pt-16 md:pt-20">{children}</main>
       <Footer />
       
-      {/* Decorative elements */}
-      <div className="fixed top-20 left-10 w-64 h-64 bg-secondary/20 rounded-full filter blur-3xl z-0 opacity-30"></div>
-      <div className="fixed bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full filter blur-3xl z-0 opacity-30"></div>
+      {/* Enhanced decorative elements with more vibrant colors */}
+      <div className="fixed top-20 left-10 w-64 h-64 bg-purple-500/30 rounded-full filter blur-3xl z-0 opacity-30"></div>
+      <div className="fixed bottom-20 right-10 w-96 h-96 bg-pink-500/30 rounded-full filter blur-3xl z-0 opacity-30"></div>
+      <div className="fixed bottom-40 left-40 w-80 h-80 bg-blue-500/20 rounded-full filter blur-3xl z-0 opacity-20"></div>
+      <div className="fixed top-40 right-40 w-72 h-72 bg-green-400/20 rounded-full filter blur-3xl z-0 opacity-20"></div>
     </div>
   );
 };

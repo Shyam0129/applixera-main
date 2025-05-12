@@ -20,12 +20,12 @@ const PageHero: React.FC<PageHeroProps> = ({
   colorScheme = "primary",
 }) => {
   const gradientClasses = {
-    primary: "bg-gradient-to-br from-brand-50 to-white",
+    primary: "bg-gradient-vibrant",
     secondary: "bg-gradient-fresh",
     accent: "bg-gradient-warm",
     vibrant: "bg-gradient-vibrant",
     warm: "bg-gradient-warm",
-    fresh: "bg-gradient-fresh"
+    fresh: "bg-gradient-sunset"
   };
 
   return (
@@ -36,10 +36,11 @@ const PageHero: React.FC<PageHeroProps> = ({
         className
       )}
     >
-      {/* Decorative elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 blob bg-white/10"></div>
-      <div className="absolute top-20 right-20 w-32 h-32 blob bg-white/20 delay-300"></div>
-      <div className="absolute bottom-10 left-1/3 w-40 h-40 blob bg-white/15 delay-100"></div>
+      {/* Enhanced decorative elements */}
+      <div className="absolute top-10 left-10 w-20 h-20 blob bg-white/30 float"></div>
+      <div className="absolute top-20 right-20 w-32 h-32 blob bg-white/40 delay-300 float"></div>
+      <div className="absolute bottom-10 left-1/3 w-40 h-40 blob bg-white/25 delay-100 float"></div>
+      <div className="absolute bottom-20 right-1/4 w-24 h-24 blob bg-white/20 delay-200 float"></div>
       
       <div className="container relative z-10">
         <div className={cn(
@@ -48,13 +49,13 @@ const PageHero: React.FC<PageHeroProps> = ({
           align === "right" && "ml-auto text-right"
         )}>
           <h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight bounce-in"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight bounce-in text-white drop-shadow-md"
           >
             {title}
           </h1>
           {subtitle && (
             <p 
-              className="mt-4 text-xl text-muted-foreground bounce-in delay-200"
+              className="mt-4 text-xl text-white/90 bounce-in delay-200"
             >
               {subtitle}
             </p>
