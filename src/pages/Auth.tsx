@@ -79,7 +79,8 @@ const Auth = () => {
       email: "",
       password: "",
       confirmPassword: "",
-      agreeTerms: false,
+      // Fix: Remove the default value for agreeTerms since z.literal(true) requires it to be true
+      // and we'll let the user check the box instead of providing a default
     },
   });
 
